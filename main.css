@@ -1,9 +1,46 @@
 @import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+@keyframes slide {
+    0% {transform: translateX(-230px)}
+    50% {transform: translateX(10px) }
+    100% {transform: translateX(0px)}
+}
 body {
     color: white;
+    background-color: black;
 }
-.main {
-    background-image: url(/Images/bonfire-gbfdc584cb_1920.jpg);
+.ani-navbar {
+    width: 200px;
+    background-color: white;
+    color: black;
+    height: 100%;
+    padding: 25px;
+    position: fixed;
+    z-index: 5;
+    text-align: right;
+    margin-left: -100px;
+}
+.side-menu {
+    font-size: 38px;
+    font-weight: 700;
+    margin: 50px 0;
+}
+.ani-navbar button {
+    color: white;
+    margin-top: 10px;
+    font-size: 32px;
+}
+.ani-navbar:hover {
+    transform: translateX(100px);
+    text-align: center;
+}
+.ani-navbar:hover button {
+    animation-name: slide;
+    animation-duration: 1s;
+    color: black;
+}
+.main , .rain_main {
     background-size: cover;
  background-repeat: no-repeat;
  background-position: center;
@@ -11,12 +48,37 @@ body {
     height: 1000px;
     display: flex;
     justify-content: center;
-    padding-top: 200px;
+    
+    padding-top: 10%;
 }
-
+.main {
+    
+    background-image: url(./Images/bonfire-gbfdc584cb_1920.jpg);
+}
+.rain_main {
+    background-image: url(./Images/rain.jpg);
+}
 button {
+    background-color: transparent;
+    border: none;
     padding: 10px 25px;
     font-size: 22px;
     text-align: center;
     margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.volume_bar {
+    display: block;
+    cursor: pointer;
+}
+
+.play_btn {
+    width: 400px;
+}
+
+.head {
+    font-size: 104px;
+    font-weight: 700;
+    font-family: 'Bree Serif', serif;
 }
