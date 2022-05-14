@@ -49,8 +49,8 @@ body {
     height: 2200px;
     display: flex;
     justify-content: center;
-    
     padding-top: 10%;
+    text-align: center;
 }
 .main {
     
@@ -65,21 +65,57 @@ button {
     padding: 10px 25px;
     font-size: 22px;
     text-align: center;
-    margin-bottom: 50px;
     cursor: pointer;
+    margin-bottom: 75px;
 }
 
-.volume_bar {
-    display: block;
-    cursor: pointer;
-}
 
 .play_btn {
-    width: 400px;
+    width: 250px;
 }
 
 .head {
     font-size: 104px;
     font-weight: 700;
     font-family: 'Bree Serif', serif;
+    margin-bottom: 50px;
+}
+
+
+.volume-slider-con{
+    margin:0 auto;
+    height:10px;
+    width: 60%;
+       position:relative;
+    background-color:black;
+    border-radius: 20px;
+    margin-bottom: 75px;
+  }
+.volume-slider-con:hover {
+    cursor: pointer;
+}
+  .volume-slider{
+     height:100%;
+     width:100%;
+     position:relative;
+     background-color: white;
+     border-radius: 20px;
+  }
+
+  .detail {
+      font-size: 22px;
+      
+  }
+
+  .hidden {
+    background-color:transparent;
+    color:transparent;
+      width: 150px;
+      height: 75px;
+      margin: 500px auto;
+      cursor: pointer;
+  }
+
+.hidden1 {
+    color: white;
 }

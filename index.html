@@ -25,45 +25,14 @@
         <button id="playPause_btn" onclick="playPause()">
           <img src="./Images/play.png" class="play_btn" />
         </button>
-        <input
-          type="range"
-          min="0"
-          max="100"
-          id="myvolume"
-          class="volume_bar"
-        />
+        <div class="volume-slider-con">
+          <div class="volume-slider"></div>
+        </div>
         <h1 class="head">Fire Wood</h1>
-        <p>Fire Sounds for Sleep & Study</p>
+        <p class="detail">Fire Sounds for Sleep & Study</p>
+        <div class="hidden">ㅋ 찾았농</div>
       </div>
     </section>
-
-    <script>
-      let audio = document.getElementById("myaudio");
-      let playPause_btn = document.getElementById("playPause_btn");
-      let volume = document.getElementById("myvolume");
-      let count = 0;
-
-      function playPause() {
-        if (count == 0) {
-          count = 1;
-          audio.play();
-          audio.loop = true;
-          playPause_btn.innerHTML =
-            "<img src='./Images/pause.png' width='400px'>";
-        } else {
-          count = 0;
-          audio.pause();
-          playPause_btn.innerHTML =
-            "<img src='./Images/play.png' width='400px'>";
-        }
-      }
-
-      function stop() {
-        playPause();
-        audio.pause();
-        audio.currentTime = 0;
-        playPause_btn.innerHTML = "Play";
-      }
-    </script>
+    <script src="./sound.js"></script>
   </body>
 </html>
